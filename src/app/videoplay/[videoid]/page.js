@@ -7,8 +7,11 @@ export const dynamic = 'force-dynamic';
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
 import { useToast } from "@/hooks/use-toast"
+import { unstable_noStore as noStore } from 'next/cache';
 
 const Page = ({params}) => {
+  
+  noStore();
   const { toast } = useToast()
   const [currentUrl, setCurrentUrl] = useState();
   const [videos, setVideos] = useState({});
