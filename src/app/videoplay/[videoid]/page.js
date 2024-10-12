@@ -1,5 +1,9 @@
 "use client"
+
 import axios from 'axios';
+
+export const dynamic = 'force-dynamic';
+
 import React, { useEffect, useState } from 'react'
 import ReactPlayer from 'react-player';
 import { useToast } from "@/hooks/use-toast"

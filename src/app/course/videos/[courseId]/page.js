@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 import axios from 'axios';
 
+export const dynamic = 'force-dynamic';
+
 import ReactPlayer from 'react-player';
 import { Card } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
