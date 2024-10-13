@@ -8,7 +8,7 @@ import Link from "next/link"
 export default function VideoCardlms({ video }) {
   return (
     <Card className="w-72 h-72 overflow-hidden">
-        <Link href={`/videoplays/${video._id}`} >
+        <Link href={`/videoplay/${video._id}`} >
       <div className="relative w-full h-48 aspect-video group cursor-pointer" >
         <img
           src={video?.thambnail} 
