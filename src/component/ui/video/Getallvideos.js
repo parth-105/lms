@@ -34,6 +34,7 @@ const VideoList = () => {
         const response = await axios.get('/api/videos/getvideos'); // Make a GET request
       
         setVideos(response.data.videos);
+        console.log('vvvv',response.data.videos)
           setLoading(false)// Update state with fetched videos
       } catch (error) {
         toast({

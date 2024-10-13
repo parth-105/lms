@@ -10,6 +10,8 @@ import React from 'react'
     <div className="flex h-screen">
    
       <VideoList />
+
+
       
       <AIAssistantBot/>
       
