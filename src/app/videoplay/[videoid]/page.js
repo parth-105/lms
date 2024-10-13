@@ -72,30 +72,31 @@ const Page = ({ params }) => {
   const [currentUrl, setCurrentUrl] = useState();
   const [videos, setVideos] = useState({});
 
-  useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        const response = await axios.post('/api/videos/getvideosbyid', { id: params.videoid });
-        setVideos(response.data.videos);
-        setCurrentUrl(response.data.videos.videourl);
-      } catch (error) {
-        toast({
-          title: "Validation Error",
-          description: "Please fill in all required fields.",
-        });
-      }
-    };
+  // useEffect(() => {
+  //   const fetchVideos = async () => {
+  //     try {
+  //       const response = await axios.post('/api/videos/getvideosbyid', { id: params.videoid });
+  //       setVideos(response.data.videos);
+  //       setCurrentUrl(response.data.videos.videourl);
+  //     } catch (error) {
+  //       toast({
+  //         title: "Validation Error",
+  //         description: "Please fill in all required fields.",
+  //       });
+  //     }
+  //   };
 
-    fetchVideos();
-  }, [params.videoid]);
+  //   fetchVideos();
+  // }, [params.videoid]);
 
   return (
     <div>
-      <div className="video-player w-full md:w-full z-30 bg-brown-50 top-0 md:static">
+      {/* <div className="video-player w-full md:w-full z-30 bg-brown-50 top-0 md:static">
         <ReactPlayer url={currentUrl} controls width="100%" height="100%" />
         <h2 className="text-xl font-bold mb-2">{videos?.title}</h2>
         <p className="mb-4">{videos?.description}</p>
-      </div>
+      </div> */}
+      <h1>{params.videoid }</h1>
     </div>
   );
 };

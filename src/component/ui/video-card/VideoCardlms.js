@@ -12,6 +12,7 @@ export default function VideoCardlms({ video }) {
 
   const handleClick = (videoid) => {
     router.push(`/videoplay/${videoid}`); 
+ //   router.push(`/video?videoId=${videoId}`)
   };
 
 
