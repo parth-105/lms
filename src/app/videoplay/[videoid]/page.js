@@ -74,7 +74,7 @@ const Page = ({ params }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.post('/api/videos/getvideosbyid', { id: params.videoid });
+        const response = await axios.post('/api/videos/getvideosbyid', { id: '66cc5b53c62c7999a4915c97' });
         setVideos(response.data.videos);
         setCurrentUrl(response.data.videos.videourl);
       } catch (error) {
