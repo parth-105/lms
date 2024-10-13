@@ -63,7 +63,7 @@ const VideoPlayer = dynamic(() => import('@/component/ui/Videoplayer/Videoplayer
 
 // export default Page
 
-
+export const dynamic = 'force-dynamic';
 
 
 const Page = async ({ params }) => {
