@@ -4,21 +4,11 @@ import { Play } from "lucide-react"
 import Link from "next/link"
 
 
-import { useRouter } from 'next/navigation';
 
 export default function VideoCardlms({ video }) {
-
-  const router = useRouter();
-
-  const handleClick = (videoid) => {
-    router.push(`/videoplay/${videoid}`); 
- //   router.push(`/video?videoId=${videoId}`)
-  };
-
-
   return (
-    <Card onClick={() => handleClick(video._id)} className="w-72 h-72 overflow-hidden">
-        {/* <Link href={`/videoplay/${video._id}`} > */}
+    <Card className="w-72 h-72 overflow-hidden">
+        <Link href={`/videoplays/${video._id}`} >
       <div className="relative w-full h-48 aspect-video group cursor-pointer" >
         <img
           src={video?.thambnail} 
@@ -42,7 +32,7 @@ export default function VideoCardlms({ video }) {
           <p className="text-sm text-muted-foreground">{video?.instructor?.name}</p>
         </div>
       </CardContent>
-      {/* </Link> */}
+      </Link>
     </Card>
   )
 }
