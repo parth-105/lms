@@ -59,7 +59,7 @@
     "mongoose": "^8.4.0",
     "multer": "^1.4.5-lts.1",
     "next": "13.4.7",
-    "next-auth": "^5.0.0-beta.17",
+    "next-auth": "^4.24.7",
     "next-compose-plugins": "^2.2.1",
     "next-connect": "^1.0.0",
     "nookies": "^2.5.2",
