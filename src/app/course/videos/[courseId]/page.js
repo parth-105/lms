@@ -8,13 +8,13 @@ export const dynamic = 'force-dynamic';
 import ReactPlayer from 'react-player';
 import { Card } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { unstable_noStore as noStore } from 'next/cache';
+
 
 function Videos({ params }) {
 
   //const [Videos, setVideos] = useState([]);
 
-  noStore();
+
    const [videoList, setVideoList] = useState([]);
   
   const [currentUrl, setCurrentUrl] = useState();
