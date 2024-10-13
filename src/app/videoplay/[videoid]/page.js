@@ -1,13 +1,13 @@
 // "use client"
 
-//import VideoPlayer from "@/component/ui/Videoplayer/Videoplayer";
+import VideoPlayer from "@/component/ui/Videoplayer/Videoplayer";
 import { connect } from "@/lib/mongo";
 import Video from "@/model/video-model";
 
 
 import dynamic from 'next/dynamic';
 
-const VideoPlayer = dynamic(() => import('@/component/ui/Videoplayer/Videoplayer'), { ssr: false });
+// const VideoPlayer = dynamic(() => import('@/component/ui/Videoplayer/Videoplayer'), { ssr: false });
 
 
 // import axios from 'axios';
