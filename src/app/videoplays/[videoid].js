@@ -41,6 +41,7 @@ const Page = ({params}) => {
 
   return (
     <div>
+        <h1>hhh</h1>
       <h1>{params.videoid}</h1>
       {/* <div className="video-player w-full md:w-full  z-30 bg-brown-50  top-0 md:static ">
           <ReactPlayer url={currentUrl} controls width="100%" height="100%" />
