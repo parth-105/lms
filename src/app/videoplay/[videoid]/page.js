@@ -18,7 +18,7 @@ const Page = ({params}) => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.post('/api/videos/getvideosbyid',{id:params.videoid}); // Make a GET request
+        const response = await axios.post('https://eduhub-theta.vercel.app/api/videos/getvideosbyid',{id:params.videoid}); // Make a GET request
        
         setVideos(response.data.videos); 
         setCurrentUrl(response.data.videos.videourl)// Update state with fetched videos
