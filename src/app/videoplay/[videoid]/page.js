@@ -55,6 +55,7 @@
 
 
 
+// app/videoplay/[videoid]/page.js
 "use client";
 
 import axios from 'axios';
@@ -74,7 +75,7 @@ const Page = ({ params }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.post('/api/videos/getvideosbyid', { id: '66cc5b53c62c7999a4915c97' });
+        const response = await axios.post('/api/videos/getvideosbyid', { id: params.videoid });
         setVideos(response.data.videos);
         setCurrentUrl(response.data.videos.videourl);
       } catch (error) {
@@ -86,12 +87,7 @@ const Page = ({ params }) => {
     };
 
     fetchVideos();
-
-    // Cleanup function (optional)
-    return () => {
-      // Perform any cleanup (e.g., close connections, unsubscribe, etc.)
-    };
-  }, [params.videoid]); // Dependency array includes params.videoid to refetch when it changes
+  }, [params.videoid]);
 
   return (
     <div>
